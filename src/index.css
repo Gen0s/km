@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #0a0f1a;
+    color: #c8cdd8;
+    font-family: 'DM Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #0a0f1a; }
+  ::-webkit-scrollbar-thumb { background: #2a3550; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+}
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+  .fill-mode-both { animation-fill-mode: both; }
+
+  .grid-texture {
+    background-image:
+      linear-gradient(rgba(245,158,11,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,158,11,0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .amber-glow {
+    box-shadow: 0 0 24px rgba(245, 158, 11, 0.12);
+  }
+
+  .skill-bar-fill {
+    animation: growSkill 1.1s cubic-bezier(0.4,0,0.2,1) both;
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes growSkill {
+  from { width: 0%; }
+  to   { width: var(--skill-width); }
+}

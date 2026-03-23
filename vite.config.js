@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 // If deploying to a custom domain, set base to '/'
 export default defineConfig({
   plugins: [react()],
-  base: '/https://github.com/Gen0s/km/',
+  base: '/km/',
 })
